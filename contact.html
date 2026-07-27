@@ -21,9 +21,23 @@
   .nav-links a.active{text-decoration:underline;}
 
   .contact-wrap{padding:70px 0 90px;}
-  .contact-grid{max-width:600px;margin:0 auto;}
+  .contact-grid{display:grid;grid-template-columns:1fr 0.8fr;gap:70px;align-items:center;max-width:1000px;margin:0 auto;}
   .contact-grid h1{font-size:56px;margin:0 0 26px;font-weight:500;}
   .contact-grid p{font-size:16px;color:var(--muted);max-width:440px;margin-bottom:44px;}
+
+  .monogram-wrap{display:flex;justify-content:center;}
+  .monogram{
+    width:320px;height:320px;border-radius:50%;
+    background:radial-gradient(circle at 32% 28%, #2E5CB8 0%, #1B3A82 45%, #12245A 100%);
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 20px 50px rgba(18,36,90,0.35);
+    border:6px solid #FFC72C;
+    position:relative;
+  }
+  .monogram span{
+    font-family:'Space Grotesk';font-weight:700;font-size:110px;color:#FFC72C;
+    letter-spacing:-0.02em;
+  }
 
   label{display:block;font-size:14px;margin-bottom:8px;color:#2E2B25;}
   input,textarea{
@@ -41,6 +55,8 @@
     .contact-grid{grid-template-columns:1fr;}
     .contact-grid h1{font-size:38px;}
     .name-row{grid-template-columns:1fr;}
+    .monogram{width:220px;height:220px;}
+    .monogram span{font-size:76px;}
   }
 </style>
 </head>
@@ -71,6 +87,9 @@
         <textarea name="Message" required></textarea>
         <button type="submit" class="send">SEND</button>
       </form>
+    </div>
+    <div class="monogram-wrap">
+      <div class="monogram"><span>IM</span></div>
     </div>
   </div>
 </section>
