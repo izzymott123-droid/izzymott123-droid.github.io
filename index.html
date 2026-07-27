@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Isabella Mottahedeh | Product Management Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#DDC9AF;--bg-soft:#EDE6DA;--surface:#FFFFFF;--ink:#232019;--muted:#5F594E;--line:rgba(35,32,25,0.14);--accent:#22346E;}
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--bg-soft);color:var(--ink);font-family:'Inter',sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3{font-family:'Space Grotesk',sans-serif;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 40px;}
+  .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease, transform .6s ease;}
+  .reveal.in{opacity:1;transform:none;}
+  img{max-width:100%;display:block;}
+
+  nav{background:var(--bg-soft);border-bottom:1px solid var(--line);}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:26px 40px;max-width:1200px;margin:0 auto;font-family:'Space Grotesk';font-size:19px;}
+  .nav-links{display:flex;gap:40px;font-size:16px;font-family:'Inter';}
+  .nav-links a:hover{color:var(--accent);}
+
+  .hero{background:var(--bg);padding:90px 0 0;text-align:center;}
+  .hero h1{font-size:64px;margin:0 0 14px;font-weight:500;}
+  .hero .role{font-size:26px;color:#4A453B;margin:0 0 46px;font-family:'Space Grotesk';font-weight:400;}
+  .hero-photo{width:100%;max-height:640px;object-fit:cover;}
+  .hero-tagline{max-width:760px;margin:56px auto 18px;font-size:28px;line-height:1.35;font-family:'Space Grotesk';font-weight:400;}
+  .hero-sub{color:var(--muted);font-size:16px;margin-bottom:44px;}
+  .btn-view{display:inline-block;background:var(--ink);color:#F4EFE6;padding:20px 56px;border-radius:6px;font-size:15px;letter-spacing:.02em;margin-bottom:70px;}
+  .btn-view:hover{background:var(--accent);}
+
+  .roles-head{background:var(--bg-soft);padding:110px 0 80px;text-align:center;}
+  .roles-head h2{font-size:44px;font-weight:500;max-width:900px;margin:0 auto;line-height:1.25;}
+
+  .role-section{background:var(--bg);padding:80px 0;}
+  .role-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;}
+  .role-eyebrow{font-size:13px;color:var(--muted);margin-bottom:6px;}
+  .role-title{font-size:36px;font-weight:500;margin:0 0 18px;}
+  .role-intro{font-size:16px;color:#3A3630;margin-bottom:26px;max-width:520px;}
+  .role-list{margin:0;padding:0;list-style:none;}
+  .role-list li{position:relative;padding-left:20px;margin-bottom:16px;font-size:15px;color:#2E2B25;max-width:540px;}
+  .role-list li::before{content:"•";position:absolute;left:0;color:var(--accent);font-weight:700;}
+  .role-list b{font-weight:600;}
+  .shot{border-radius:10px;overflow:hidden;box-shadow:0 12px 30px rgba(0,0,0,0.15);margin-bottom:22px;border:1px solid rgba(0,0,0,0.06);}
+  .shot img{width:100%;display:block;}
+
+  .proj-section{background:var(--bg);padding:90px 0 60px;}
+  .proj-grid{display:grid;grid-template-columns:0.9fr 1.1fr 0.7fr;gap:40px;margin-bottom:48px;}
+  .proj-label{font-size:15px;color:var(--muted);margin-bottom:4px;}
+  .proj-title{font-size:42px;font-weight:500;margin:0;}
+  .proj-meta-title{font-size:13px;font-weight:600;color:var(--muted);margin:0 0 4px;text-transform:uppercase;letter-spacing:.04em;}
+  .proj-meta-val{font-size:14px;margin-bottom:18px;}
+
+  .bg-section{background:var(--bg-soft);padding:110px 0;text-align:center;}
+  .bg-section h2{font-size:44px;font-weight:500;margin:0 0 40px;}
+  .bg-section p{max-width:980px;margin:0 auto 90px;font-size:19px;line-height:1.7;color:#2E2B25;}
+  .bg-icons{display:grid;grid-template-columns:1fr 1fr 1fr;gap:40px;max-width:900px;margin:0 auto;}
+  .bg-icon-box{width:100%;aspect-ratio:1;background:var(--surface);border-radius:16px;display:flex;align-items:center;justify-content:center;margin-bottom:18px;box-shadow:0 8px 20px rgba(0,0,0,0.08);}
+  .bg-label{background:#C9B695;padding:14px;font-size:15px;font-weight:500;border-radius:4px;}
+
+  footer{padding:36px 0;text-align:center;color:var(--muted);font-size:13px;background:var(--bg-soft);}
+
+  @media(max-width:900px){
+    .role-grid,.proj-grid{grid-template-columns:1fr;}
+    .bg-icons{grid-template-columns:1fr;}
+    .hero h1{font-size:42px;}
+    .hero-tagline{font-size:22px;}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div>Isabella Mottahedeh&nbsp;&nbsp;|&nbsp;&nbsp;Product Management Portfolio</div>
+    <div class="nav-links"><a href="about.html">About</a><a href="contact.html">Contact</a></div>
+  </div>
+</nav>
+
+<header class="hero">
+  <h1>Isabella Mottahedeh</h1>
+  <div class="role">Product Manager</div>
+  <img src="photo-hero.jpg" alt="Isabella Mottahedeh" class="hero-photo">
+  <p class="hero-tagline reveal">Turning user research into shipped products — from discovery to delivery.</p>
+  <p class="hero-sub reveal">UCLA Cognitive Science + Computing &nbsp;·&nbsp; Expected December 2026</p>
+  <a href="#roles" class="btn-view reveal">View My Work</a>
+</header>
+
+<section class="roles-head" id="roles">
+  <div class="wrap reveal"><h2>Three roles. Real ownership. Measurable outcomes.</h2></div>
+</section>
+
+<!-- ILLUMIA -->
+<section class="role-section">
+  <div class="wrap role-grid reveal">
+    <div>
+      <div class="role-eyebrow">June – August 2026 &nbsp;·&nbsp; Flagship Project</div>
+      <h3 class="role-title">Illumia | Product Management Intern</h3>
+      <p class="role-intro">As the PM lead on a cross-functional team, co-led a full end-to-end discovery project on the <b>Authorized Payer experience</b> — the flow parents and payers use to log in and pay tuition bills — using SVPG's Double Diamond methodology.</p>
+      <ul class="role-list">
+        <li>Built and ran the qualitative research plan: wrote the interview guide and personally led user interviews with authorized payers and parents</li>
+        <li>Synthesized <b>10 user interviews, 9 support tickets</b>, and <b>25 survey responses</b> to diagnose a <b>26% authorized-payer inactivity rate</b></li>
+        <li>Led ideation workshops and owned prototyping using AI design tools — built <b>2 prototypes</b>, converged on 1 final design</li>
+        <li>Personally facilitated <b>8 live usability and prototype-testing sessions</b> with real payers, validating 3 hypotheses</li>
+        <li>Prioritized a backlog of <b>17 client-submitted ideas</b> across 5 themes to scope an 8-week research sprint</li>
+        <li>Defined 1 North Star goal and delivered <b>2 product recommendations</b> to leadership</li>
+      </ul>
+    </div>
+    <div>
+      <div class="shot"><img src="illumia-legacy.png" alt="Legacy Transact + CBORD tuition payment portal"></div>
+      <div class="shot"><img src="illumia-prototype.png" alt="Illumia ePayment prototype — Authorized Payer overview"></div>
+    </div>
+  </div>
+</section>
+
+<!-- GIVINGLI -->
+<section class="role-section" style="background:var(--bg-soft);">
+  <div class="wrap role-grid reveal">
+    <div>
+      <div class="role-eyebrow">June – September 2025 &nbsp;·&nbsp; Series A Digital Gifting Startup</div>
+      <h3 class="role-title">Givingli | Product Management Intern</h3>
+      <p class="role-intro">Drove checkout conversion improvements and shipped 9 PRDs across a fast-moving cross-functional team.</p>
+      <ul class="role-list">
+        <li>Raised purchase-step conversion from <b>4.8% to 7.82%</b> through A/B testing and UX enhancements</li>
+        <li>Partnered with engineering and design to draft <b>9 PRDs</b>, create <b>17 prototypes</b>, and run <b>9 design-to-dev handoffs</b></li>
+        <li>Turned <b>26 customer interviews</b> into concrete, shipped UX improvements</li>
+        <li>Led a CTA and checkout-flow optimization initiative: wrote the PRD and dev handoff doc, built <b>4 Figma mockups</b> to test hierarchy, ran A/B tests, and increased conversion and attachment rates by <b>~63%</b></li>
+        <li>Presented findings and recommendations directly to leadership</li>
+      </ul>
+    </div>
+    <div class="shot"><img src="givingli-dashboard.png" alt="Givingli Checkout CTA Update KPI dashboard"></div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="proj-section">
+  <div class="wrap">
+    <div class="proj-grid reveal">
+      <div>
+        <div class="proj-label">Projects:</div>
+        <h2 class="proj-title">BruinLease</h2>
+        <p style="margin-top:16px;color:var(--muted);font-size:14px;">Founder &amp; Solo Builder &nbsp;·&nbsp; UCLA Sublease Marketplace</p>
+      </div>
+      <div>
+        <p style="font-size:16px;margin-top:0;">A full-stack sublease marketplace built solo for UCLA students — from zero to 300+ views in week one.</p>
+        <ul class="role-list">
+          <li>Built the MVP with <b>Next.js, Supabase, and PostgreSQL</b> supporting 20+ active listings</li>
+          <li>Built an <b>AI-powered listing generator</b> using the OpenAI API that cut listing creation time by <b>~60%</b></li>
+          <li>Integrated <b>PostHog analytics</b> tracking 5+ key user events to study demand patterns</li>
+          <li>Launched to UCLA student networks: <b>20+ listings, 300+ views</b>, and <b>50+ search queries</b> in the first week</li>
+        </ul>
+      </div>
+      <div>
+        <div class="proj-meta-title">Stack</div>
+        <div class="proj-meta-val">Next.js · Supabase · PostgreSQL · OpenAI API · PostHog</div>
+        <div class="proj-meta-title">Role</div>
+        <div class="proj-meta-val">Founder, Designer, Engineer, PM</div>
+      </div>
+    </div>
+    <div class="shot reveal"><img src="bruinlease.png" alt="BruinLease sublease marketplace"></div>
+  </div>
+</section>
+
+<!-- BACKGROUND -->
+<section class="bg-section" id="background">
+  <div class="wrap reveal">
+    <h2>Background:</h2>
+    <p>I've always gravitated toward the messy middle where technology, design, and user experience collide — the space where a clever piece of engineering only matters if it actually makes someone's life easier. I study Cognitive Science with a Specialization in Computing at UCLA, a combination that turned out to be exactly the right training ground for product work. My coursework drives me to sit in on every user interview and read every support ticket to uncover the problem rather than skip to building the solution. My combination of technical fluency and genuine curiosity about why people do what they do is what's carried me through every role I've held: leading a full discovery project on Illumia's Authorized Payer experience from research through prototype testing, driving a checkout-flow redesign at Givingli that lifted conversion by 63%, building and shipping my own product (BruinLease) end to end, while mentoring 13 junior analysts at TAMID Consulting Group. What I want next is more of the same — problems messy enough to need real research, and the room to see a solution through from the first user conversation to the shipped product.</p>
+    <div class="bg-icons">
+      <div>
+        <div class="bg-icon-box"><svg width="60" height="60" viewBox="0 0 60 60"><rect width="60" height="60" rx="12" fill="#191919"/><circle cx="22" cy="18" r="8" fill="#F24E1E"/><circle cx="38" cy="18" r="8" fill="#A259FF"/><circle cx="22" cy="34" r="8" fill="#FF7262"/><circle cx="38" cy="34" r="8" fill="#1ABCFE"/><circle cx="22" cy="50" r="8" fill="#0ACF83"/></svg></div>
+        <div class="bg-label">Design</div>
+      </div>
+      <div>
+        <div class="bg-icon-box"><span style="font-family:'Space Grotesk';font-weight:800;font-size:30px;color:#2774AE;">UCLA</span></div>
+        <div class="bg-label">Discover</div>
+      </div>
+      <div>
+        <div class="bg-icon-box"><svg width="56" height="56" viewBox="0 0 56 56"><path d="M28 4c-8 0-8 4-8 8v6h16v2H12c-4 0-8 3-8 10s4 10 8 10h4v-8c0-4 3-8 8-8h10c4 0 7-3 7-7V12c0-4-4-8-13-8z" fill="#3776AB"/><path d="M28 52c8 0 8-4 8-8v-6H20v-2h24c4 0 8-3 8-10s-4-10-8-10h-4v8c0 4-3 8-8 8H22c-4 0-7 3-7 7v8c0 4 4 8 13 8z" fill="#FFD43B"/></svg></div>
+        <div class="bg-label">Develop</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 Isabella Mottahedeh · Los Angeles, CA</footer>
+
+<script>
+  const els = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.1});
+  els.forEach(el=>io.observe(el));
+</script>
+
+</body>
+</html>

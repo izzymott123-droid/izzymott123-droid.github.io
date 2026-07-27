@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Contact | Isabella Mottahedeh</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--bg-soft:#EDE6DA;--ink:#232019;--muted:#5F594E;--line:rgba(35,32,25,0.14);}
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--bg-soft);color:var(--ink);font-family:'Inter',sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;}
+  h1{font-family:'Space Grotesk',sans-serif;}
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 40px;}
+
+  nav{background:var(--bg-soft);border-bottom:1px solid var(--line);}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:26px 40px;max-width:1200px;margin:0 auto;font-family:'Space Grotesk';font-size:19px;}
+  .nav-links{display:flex;gap:40px;font-size:16px;}
+  .nav-links a.active{text-decoration:underline;}
+
+  .contact-wrap{padding:70px 0 90px;}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start;}
+  .contact-grid h1{font-size:56px;margin:0 0 26px;font-weight:500;}
+  .contact-grid > div:first-child p{font-size:16px;color:var(--muted);max-width:440px;margin-bottom:44px;}
+  .contact-photo{border-radius:6px;overflow:hidden;}
+  .contact-photo img{width:100%;object-fit:cover;}
+
+  label{display:block;font-size:14px;margin-bottom:8px;color:#2E2B25;}
+  input,textarea{
+    width:100%;border:1px solid #B9AF9C;background:transparent;border-radius:4px;
+    padding:12px 14px;font-family:'Inter';font-size:14px;margin-bottom:26px;color:var(--ink);
+  }
+  textarea{min-height:120px;resize:vertical;}
+  .name-row{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+  button.send{background:var(--ink);color:#F4EFE6;padding:14px 46px;border-radius:24px;border:none;font-size:14px;cursor:pointer;}
+  button.send:hover{background:#000;}
+
+  footer{padding:36px 0;text-align:center;color:var(--muted);font-size:13px;}
+
+  @media(max-width:900px){
+    .contact-grid{grid-template-columns:1fr;}
+    .contact-grid h1{font-size:38px;}
+    .name-row{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div>Isabella Mottahedeh&nbsp;&nbsp;|&nbsp;&nbsp;Product Management Portfolio</div>
+    <div class="nav-links"><a href="index.html">Home</a><a href="about.html">About</a><a class="active" href="contact.html">Contact</a></div>
+  </div>
+</nav>
+
+<section class="contact-wrap">
+  <div class="wrap contact-grid">
+    <div>
+      <h1>Work With Me</h1>
+      <p>If you're interested in working with me, collaborating, or have questions, feel free to shoot me a message below!</p>
+
+      <form action="mailto:isabellamottahedeh@gmail.com" method="post" enctype="text/plain">
+        <label>Name</label>
+        <div class="name-row">
+          <input type="text" name="First Name" placeholder="First Name (required)" required>
+          <input type="text" name="Last Name" placeholder="Last Name (required)" required>
+        </div>
+        <label>Email (required)</label>
+        <input type="email" name="Email" required>
+        <label>Message (required)</label>
+        <textarea name="Message" required></textarea>
+        <button type="submit" class="send">SEND</button>
+      </form>
+    </div>
+    <div class="contact-photo"><img src="contact-photo.jpg" alt="Desk with notebook and pen"></div>
+  </div>
+</section>
+
+<footer>© 2026 Isabella Mottahedeh · Los Angeles, CA</footer>
+
+</body>
+</html>
